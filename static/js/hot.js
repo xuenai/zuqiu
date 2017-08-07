@@ -1,5 +1,5 @@
 require(['config'],function(){
-	require(['Zepto','swiper'],function(zepto,swiper){
+	require(['Zepto','swiper','IScroll'],function(zepto,swiper,IScroll){
 		require(['zepto.tap'],function(){
 
 			$(function(){
@@ -10,7 +10,41 @@ require(['config'],function(){
 				    // pagination: '.swiper-pagination'
 				    
 				});  
-			})
+
+				var htmlfontsize = 100*document.documentElement.clientWidth/640;
+				var startYvalue = htmlfontsize * 0.5;
+				var updrag = false;
+
+				var myScroll = new IScroll('.zhuqiuxiangchang', {
+				    mouseWheel: true,
+				    scrollbars: true,
+				    probeType:2
+				});
+
+				myScroll.on('scroll',function(){
+					if(this.y >= 30){
+						$('div.updrag').html('刷新');
+						updrag = true;
+					}
+					console.log(this.y);
+				});
+
+				myScroll.on('scrollEnd',function(){
+					// if(updrag)
+					// $('.swiper-slide>div').css('padding-top','0.6rem');
+					// $('.updrag').css('top','0');
+				})
+
+				$(document).on('touchend',function(){
+					if(updrag){
+						// myScroll.scrollTo(0,40,200);
+					$('.swiper-slide>div').css('padding-top','0.6rem');
+					$('.updrag').css('top','0');
+					}
+				})
+			});
+
+
 			// var reg = /^1\d{10}$/;
 			// var telisok = false,pswisok = false;
 			// $('input').eq(0).on('blur',function(){

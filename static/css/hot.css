@@ -16,8 +16,11 @@ nav a.active{border-bottom: 0.05rem solid #0dc441;color: #0dc441;}
 .box{flex:1;overflow: auto;padding-top: 0.8rem;width: 100%;}/*注意这里width100%坑死了忘了写*/
 .swiper-container{background-color: #fff;height: 100%;width: 100%;}
 .swiper-wrapper{height: 100%;width: 100%;}
-.swiper-slide{height: 100%;overflow: auto;width: 100%;}
+.swiper-slide{height: 100%;overflow: hidden;width: 100%;}
+.swiper-slide>div{position: relative;}
+.swiper-slide .updrag{text-align: center;height: 0.5rem;line-height: 0.5rem;position: absolute;width: 100%;top: -0.6rem;}
 
+section ul{overflow: hidden;}
 section ul li{list-style: none;width: 3.11rem;float: left;border: 1px solid #e5e5e5;margin-bottom: 0.1rem;}
 section ul li img{width: 3.11rem;display: block;}
 section ul li:nth-child(2n+1){float: left;}
