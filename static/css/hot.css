@@ -1,0 +1,33 @@
+html,body{width: 100%;height: 100%;font-size: 16px;}
+body{display: flex;flex-direction:column;align-items:center;}
+
+header{height: 0.88rem;background-color: #0dc441;font-size: 0.23rem;color: #fff;text-align: center;line-height: 0.88rem;width: 100%;}
+
+header span{display: inline-block;width: 1.14rem;height: 0.48rem;opacity:0.7;background-color: #64d985;line-height: 0.48rem;}
+header span:first-child{border-radius: 0.24rem 0 0 0.24rem;}
+header span:last-child{border-radius: 0 0.24rem 0.24rem 0;}
+header span.active{opacity: 1;}
+
+
+nav{height: 0.7rem;border-bottom:1px solid #d9d9d9;display: flex;width: 100%;background-color: rgba(255,255,255,0.6);position: absolute;top: 0.88rem;z-index: 20;}
+nav a{flex:1;height: 0.66rem;line-height: 0.66rem;color: #666;text-align: center;text-decoration: none;font-size: 0.28rem;}
+nav a.active{border-bottom: 0.05rem solid #0dc441;color: #0dc441;}
+
+.box{flex:1;overflow: auto;padding-top: 0.8rem;width: 100%;}/*注意这里width100%坑死了忘了写*/
+.swiper-container{background-color: #fff;height: 100%;width: 100%;}
+.swiper-wrapper{height: 100%;width: 100%;}
+.swiper-slide{height: 100%;overflow: auto;width: 100%;}
+
+section ul li{list-style: none;width: 3.11rem;float: left;border: 1px solid #e5e5e5;margin-bottom: 0.1rem;}
+section ul li img{width: 3.11rem;display: block;}
+section ul li:nth-child(2n+1){float: left;}
+section ul li:nth-child(2n+2){float: right;}
+section ul li p{height: 0.58rem;line-height: 0.58rem;font-size: 0.25rem;padding-left: 0.2rem;border-top:1px solid #e5e5e5; }
+
+
+footer{text-align: center;font-size: 0.25rem; border-top: 1px solid rgba(200,200,200,0.5); height: 0.87rem;width: 100%;display: flex;align-items:center;justify-content:space-around;color: #d1d1d1;}
+footer div i{font-size: 0.32rem!important;}
+footer div{font-size: 0.23rem;}
+footer .xiangji{z-index: 20; width: 1rem;height: 1rem;border-radius: 0.5rem;border:1px solid #d6d6d6;margin-top: -0.2rem;line-height: 1rem;background-color: #fff;}
+footer .xiangji i{font-size: 0.55rem!important;}
+footer div.active{color: #0dc441;}
