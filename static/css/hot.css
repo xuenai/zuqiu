@@ -31,7 +31,6 @@ section .zhuqiuxiangchang ul li:nth-child(2n+1),section .zhuqiumeinv ul li:nth-c
 section .zhuqiuxiangchang ul li:nth-child(2n+2),section .zhuqiumeinv ul li:nth-child(2n+2){float: right;}
 section .zhuqiuxiangchang ul li p,section .zhuqiumeinv ul li p{height: 0.58rem;line-height: 0.58rem;font-size: 0.25rem;padding-left: 0.2rem;border-top:1px solid #e5e5e5; }
 
-/*section .zhuqiushenghuo>div{height: 1000px;}*/
 section .zhuqiushenghuo ul li img{width: 3.11rem;display: block;}
 section .zhuqiushenghuo ul li p{padding-bottom: 0.10rem; line-height: 0.4rem;font-size: 0.22rem;padding-left: 0.2rem;border-top:1px solid #e5e5e5;}
 
