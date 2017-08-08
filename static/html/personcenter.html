@@ -30,51 +30,50 @@
   <div class="li">
     <img src="../img/pikaqiu.jpg">
     <div>
-      <p>我叫小</p>
+      <p>我叫 <span class='nickname'></span>  </p>
       <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
     </div>
   </div>
   <div class="nav">
     <span class='active'>照片（1）</span>
-    <span>关注（3）</span>
+    <span>关注（<i></i>）</span>
     <span>粉丝（8）</span>
   </div>
-  <div class="photo">
-    <img src="../img/tu.jpg">
-    <img src="../img/tu.jpg">
-    <img src="../img/tu.jpg">
-    <img src="../img/tu.jpg">
-    <img src="../img/tu.jpg">
-    <img src="../img/tu.jpg">
-    <img src="../img/tu.jpg">
-    <img src="../img/tu.jpg">
+
+  <div class="swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="photo">
+              <img src="../img/tu.jpg">
+              <img src="../img/tu.jpg">
+              <img src="../img/tu.jpg">
+              <img src="../img/tu.jpg">
+              <img src="../img/tu.jpg">
+              <img src="../img/tu.jpg">
+              <img src="../img/tu.jpg">
+              <img src="../img/tu.jpg">
+            </div>
+          </div>
+          <div class="swiper-slide guanzhu">
+            
+          </div>
+          <div class="swiper-slide">Slide 3</div>
+      </div>
   </div>
 </section>
-
-<footer>
-  <div class="shouye active">
-    <i class="iconfont icon-shouye"></i><br>
-    首页
-  </div>
-  <div class="shouye">
-    <i class="iconfont icon-sousuo"></i><br>
-    发现
-  </div>
-  <div class="xiangji">
-    <i class="iconfont icon-androidcamera"></i>
-  </div>
-  <div class="shouye">
-    <i class="iconfont icon-wode"></i><br>
-    我的
-  </div>
-  <div class="shouye">
-    <i class="iconfont icon-tuichu"></i><br>
-    退出
-  </div>
-</footer>
-
-<script type="text/javascript" src='../js/swiper-3.4.2.min.js'></script>
-<script type="text/javascript">
+<script type="text/html" id='yiguanzhu'>
+  <% for(var i=0;i<list.length;i++){
+    var now = list[i];
+  %>
+    <div class="li">
+      <img src= <%= now.img %> >
+      <div>
+        <p>我叫<span><%= now.name %></span>  <span>取消关注</span></p>
+        <p class='des'>我是小梦我怕你</p>
+      </div>
+    </div>
+  <% } %>
 </script>
+<script type="text/javascript" src='/js/require.js' data-main="/js/personcenter"></script>
 </body>
 </html>

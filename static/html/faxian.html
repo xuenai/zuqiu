@@ -35,85 +35,42 @@
   <div class="li">
     <img src="../img/pikaqiu.jpg">
     <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
+      <p>我叫<span>屁啦求</span> <span>关注</span></p>
+      <p class='des'>我是小梦我怕你</p>
     </div>
   </div>
   <div class="li">
     <img src="../img/pikaqiu.jpg">
     <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
+      <p>我叫<span>屁啦求</span> <span>关注</span></p>
+      <p class='des'>我是小梦我怕你</p>
     </div>
   </div>
   <div class="li">
     <img src="../img/pikaqiu.jpg">
     <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
+      <p>我叫<span>屁啦求</span> <span>关注</span></p>
+      <p class='des'>我是小梦我怕你</p>
     </div>
   </div>
-  <div class="li">
-    <img src="../img/pikaqiu.jpg">
-    <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
-    </div>
-  </div>
-  <div class="li">
-    <img src="../img/pikaqiu.jpg">
-    <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
-    </div>
-  </div>
-  <div class="li">
-    <img src="../img/pikaqiu.jpg">
-    <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
-    </div>
-  </div>
-  <div class="li">
-    <img src="../img/pikaqiu.jpg">
-    <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
-    </div>
-  </div>
-  <div class="li">
-    <img src="../img/pikaqiu.jpg">
-    <div>
-      <p>我叫小萌 <span>关注</span></p>
-      <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
-    </div>
-  </div>
+  <script type="text/html" id='guanzhu'>
+
+    <% for(var i=0;i<list.length;i++){
+      var now = list[i]
+     %>
+
+        <div class="li">
+          <img src= <%= now.img %> >
+          <div>
+            <p>我叫<span><%= now.name %></span> <span>关注</span></p>
+            <p class='des'>我是小萌我怕誰！哈哈哈哈！</p>
+          </div>
+        </div>
+
+    <% } %>
+  </script>
 </section>
 
-<footer>
-  <div class="shouye active">
-    <i class="iconfont icon-shouye"></i><br>
-    首页
-  </div>
-  <div class="shouye">
-    <i class="iconfont icon-sousuo"></i><br>
-    发现
-  </div>
-  <div class="xiangji">
-    <i class="iconfont icon-androidcamera"></i>
-  </div>
-  <div class="shouye">
-    <i class="iconfont icon-wode"></i><br>
-    我的
-  </div>
-  <div class="shouye">
-    <i class="iconfont icon-tuichu"></i><br>
-    退出
-  </div>
-</footer>
-
-<script type="text/javascript" src='../js/swiper-3.4.2.min.js'></script>
-<script type="text/javascript">
-</script>
+<script type="text/javascript" src='/js/require.js' data-main="/js/faxian"></script>
 </body>
 </html>

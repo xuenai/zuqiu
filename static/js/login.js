@@ -36,6 +36,7 @@ require(['config'],function(){
 							alert(data.msg);
 							return;
 						};
+						localStorage.setItem('nickname', data.data[0].nickname);
 						location = '/html/hot.html';
 					});
 			});
