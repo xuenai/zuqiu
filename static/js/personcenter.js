@@ -41,6 +41,7 @@ require(['config'],function(){
 					$.post('/api/quxiao',{img:img,name:name},function(data){
 						if(data.code == 1){
 							$(_this).parents('.li').remove();
+							$('.nav i').html(Number($('.nav i').html())-1);
 						}
 					});
 				})
