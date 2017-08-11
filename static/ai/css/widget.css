@@ -1,0 +1,42 @@
+html,body{width: 100%;height: 100%;}
+body{display: flex;flex-direction:column;font-size: 16px;}
+header{text-align: center;height: 1.40rem;background-color: #38a2e5;line-height: 1.4rem;}
+section{flex:1;overflow: auto;}
+
+.box h3{text-align: center;margin: 0.2rem 0;line-height: 1rem;height: 1rem;background-color: #666;}
+
+/*按钮1*/
+@keyframes btn1nomove{
+	from{transform:translateX(0.51rem);}
+	to{transform:translateX(0);}
+}
+@keyframes btn1yesmove{
+	from{transform:translateX(0);}
+	to{transform:translateX(0.51rem);}
+}
+@keyframes btn1nobgc{
+	from{background-color: #55c45f;}
+	to{background-color: #ff6b6b;}
+}
+@keyframes btn1yesbgc{
+	from{background-color: #ff6b6b;}
+	to{background-color: #55c45f;}
+}
+/*基础样式*/
+.btn1{width: 1.1rem;height: 0.6rem;border-radius: 0.3rem;display: inline-block;background:url(../img/btn1bg.png) no-repeat 0.21rem 0.23rem;
+		background-size: 0.64rem 0.15rem;position: relative;background-color: #ff6b6b;}
+.btn1>div{width: 0.48rem;height: 0.48rem;background-color:#fff;border-radius: 0.24rem;position: absolute;left: 0.06rem;top: 0.06rem;}
+/*状态1 no*/
+.btn1-no{animation:btn1nobgc 0.3s;background-color: #ff6b6b;}
+.btn1-no>div{animation:btn1nomove 0.3s;transform:translateX(0);}
+/*状态2 yes*/
+.btn1-yes{animation:btn1yesbgc 0.3s;background-color: #55c45f;}
+.btn1-yes>div{animation:btn1yesmove 0.3s;transform:translateX(0.51rem);}
+/*状态3 forbid*/
+.btn1forbid{background-color: #292d39!important;background-image: none;}
+.btn1forbid>div{background-color: #393f4f!important;transform:translateX(0.51rem);}
+
+
+/*复选框*/
+.checkboxyes{width: 0.32rem;height: 0.32rem;}
+.checkbox input:checked{opacity: 0}

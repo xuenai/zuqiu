@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>登录</title>
+	<link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/widget.css">
+	<script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+              var clientWidth = docEl.clientWidth;
+              if (!clientWidth) return;     
+               docEl.style.fontSize = 100 * (clientWidth / 1080) + 'px';
+            };
+          if (!doc.addEventListener) return;
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+	</script>
+</head>
+<body>
+<header>控件列表</header>
+
+<section>
+<!-- 按钮1 -->
+<div class="box">
+  <h3>按钮1</h3>
+  <!-- 状态no -->
+  <label id='btn1no' class="btn1 btn1-no" for=""><div></div></label>
+  <!-- 状体yes -->
+  <label id='btn1yes' class="btn1 btn1-yes" for=""><div></div></label>
+  <!-- 状态forbid -->
+  <label id='btn1forbid' class="btn1 btn1forbid" for=""><div></div></label>
+</div>
+
+<div class="box">
+  <h3>复选框</h3>
+  <div class="checkbox"><input type="checkbox"></div>
+</div>
+</section>
+
+</body>
+<script>
+// 按钮1的test
+var btn1no = document.getElementById('btn1no'),
+    btn1yes = document.getElementById('btn1yes'),
+    offbtn = true;
+btn1no.onclick = btn1yes.onclick = function(){
+  if(offbtn){
+    offbtn = !offbtn;
+    this.className = 'btn1 btn1-yes';
+  }else{
+    offbtn = !offbtn;
+    this.className = 'btn1 btn1-no';
+  }
+}
+</script>
+</html>
