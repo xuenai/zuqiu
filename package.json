@@ -11,7 +11,7 @@
   "devDependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
-    "mongodb": "^2.2.30"
+    "mongodb": "^3.6.1"
   },
   "repository": {
     "type": "git",
